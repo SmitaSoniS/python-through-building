@@ -56,29 +56,6 @@ This repository is a **work in progress** and will continue evolving over time.
 
 ---
 
-## Progress Tracker
-
-* [ ] Core Python
-* [ ] Functions
-* [ ] Regex
-* [ ] NumPy
-* [ ] Pandas
-* [ ] Requests + JSON
-* [ ] SQL with Python
-* [ ] OOP
-* [ ] File Handling
-* [ ] DSA
-* [ ] Generators / Iterators / Decorators
-* [ ] Python Internals
-* [ ] Standard Library
-* [ ] Serialization
-* [ ] Environment + CLI + Logging
-* [ ] Concurrency + Systems
-* [ ] Production Python
-* [ ] Engineering Maturity
-
----
-
 ## Open Source Intent
 
 This repository is shared publicly to promote hands-on learning and make Python practice more structured and accessible.
