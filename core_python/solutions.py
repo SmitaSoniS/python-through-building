@@ -1,4 +1,13 @@
 #S1. Reverse a string without slicing
+def reverse_string(org_str):
+    l = len(org_str)
+    m = -1
+    for i in range(l):
+        reversed = "".join(org_str[m])
+        m-=1
+        print(reversed)
+reverse_string('smita')
+
 #S2. Check whether a string is palindrome
 #S3. Count vowels and consonants separately
 #S4. Find longest word in a sentence
@@ -15,7 +24,21 @@
 #S15. Find longest common prefix in list of strings
 
 #L1. Reverse list without reverse()
+def reverse_list(lst):
+    lst_copy = lst.copy()
+    l = len(lst)
+    n = -1
+    for i in range(l):
+        lst[i]=lst_copy[n]
+        n-=1
+    print(lst)
+
 #L2. Find second largest number
+def second_largest_entry(l):
+    l.sort()
+    second_largest = l[-2]
+    print(second_largest)
+
 #L3. Move all zeroes to end
 #L4. Remove duplicates manually
 #L5. Remove duplicates from sorted list
