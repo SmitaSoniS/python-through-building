@@ -14,7 +14,7 @@ Use the question IDs to map solutions consistently across solution files.
 
 * S1. Reverse a string without slicing
 * S2. Check whether a string is palindrome
-* S3. Count vowels and consonants separately
+* S3. Count distinct vowels and consonants separately
 * S4. Find longest word in a sentence
 * S5. Reverse words in a sentence without using split reverse shortcut
 

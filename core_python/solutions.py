@@ -1,15 +1,35 @@
 #S1. Reverse a string without slicing
 def reverse_string(org_str):
-    l = len(org_str)
+    reversed_str = ""
     m = -1
-    for i in range(l):
-        reversed = "".join(org_str[m])
-        m-=1
-        print(reversed)
-reverse_string('smita')
+    for i in range(len(org_str)):
+        reversed_str += org_str[m]
+        m -= 1
+    return reversed_str
 
 #S2. Check whether a string is palindrome
-#S3. Count vowels and consonants separately
+def is_palindrome(org):
+    new_str = ""
+    l = len(org)
+    m = -1
+    for i in range(l):
+        new_str = new_str+org[m]
+        m-=1
+    return org==new_str
+
+#S3. Count distinct vowels and consonants separately
+vowels = {"a", "e", "i", "o", "u"}
+def vowels_consonants_counter(word):
+    l = len(word)
+    emp_set = set()
+    for i in range(l):
+        emp_set.add(word[i])
+    vowels_count = len(vowels & emp_set)
+    print(f"Vowels count: {vowels_count}")
+    consonants_count = l - vowels_count
+    print(f"Consonants count: {consonants_count}")
+vowels_consonants_counter("smita")
+
 #S4. Find longest word in a sentence
 #S5. Reverse words in a sentence without using split reverse shortcut
 #S6. Count frequency of each character manually
@@ -31,13 +51,13 @@ def reverse_list(lst):
     for i in range(l):
         lst[i]=lst_copy[n]
         n-=1
-    print(lst)
+    return lst
 
 #L2. Find second largest number
 def second_largest_entry(l):
     l.sort()
     second_largest = l[-2]
-    print(second_largest)
+    return second_largest
 
 #L3. Move all zeroes to end
 #L4. Remove duplicates manually
