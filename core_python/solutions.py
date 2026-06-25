@@ -1,5 +1,5 @@
 #S1. Reverse a string without slicing
-def reverse_string(org_str):
+def reverse_string(org_str: str) -> str:
     reversed_str = ""
     m = -1
     for i in range(len(org_str)):
@@ -8,7 +8,7 @@ def reverse_string(org_str):
     return reversed_str
 
 #S2. Check whether a string is palindrome
-def is_palindrome(org):
+def is_palindrome(org: str) -> str:
     new_str = ""
     l = len(org)
     m = -1
@@ -18,19 +18,25 @@ def is_palindrome(org):
     return org==new_str
 
 #S3. Count distinct vowels and consonants separately
-vowels = {"a", "e", "i", "o", "u"}
-def vowels_consonants_counter(word):
+def vowels_consonants_counter(word: str) -> str:
+    vowels = {"a", "e", "i", "o", "u"}
     l = len(word)
     emp_set = set()
     for i in range(l):
         emp_set.add(word[i])
     vowels_count = len(vowels & emp_set)
-    print(f"Vowels count: {vowels_count}")
-    consonants_count = l - vowels_count
-    print(f"Consonants count: {consonants_count}")
-vowels_consonants_counter("smita")
+    consonants_count = len(emp_set) - vowels_count
+    return vowels_count, consonants_count
 
 #S4. Find longest word in a sentence
+def longest_word(sentence: str) -> str:
+    split_sentence = sentence.split()
+    longest_word = split_sentence[0]
+    for word in split_sentence:
+        if len(word)>len(longest_word):
+            longest_word = word
+    return longest_word
+
 #S5. Reverse words in a sentence without using split reverse shortcut
 #S6. Count frequency of each character manually
 #S7. Find duplicate characters in a string
@@ -44,7 +50,7 @@ vowels_consonants_counter("smita")
 #S15. Find longest common prefix in list of strings
 
 #L1. Reverse list without reverse()
-def reverse_list(lst):
+def reverse_list(lst: list) -> list:
     lst_copy = lst.copy()
     l = len(lst)
     n = -1
@@ -54,7 +60,7 @@ def reverse_list(lst):
     return lst
 
 #L2. Find second largest number
-def second_largest_entry(l):
+def second_largest_entry(l: list) -> int:
     l.sort()
     second_largest = l[-2]
     return second_largest
@@ -74,7 +80,25 @@ def second_largest_entry(l):
 #L15. Flatten nested list recursively
 
 #D1. Count character frequency using dictionary
+def char_frequency(word: str) -> dict:
+    d = {}
+    for char in word:
+        if char in d :
+            d[char] += 1
+        else:
+            d[char] = 1
+    return d
+
 #D2. Count occurrences of elements in list
+def element_count(l1: list) -> dict:
+    d = {}
+    for elements in l1:
+        if elements in d:
+            d[elements] += 1
+        else:
+            d[elements] = 1
+    return d
+
 #D3. Create dictionary from two lists
 #D4. Find key with maximum value
 #D5. Count word frequency in paragraph
@@ -85,8 +109,18 @@ def second_largest_entry(l):
 #D10. Group anagrams using dictionary
 
 #SET1. Remove duplicates from list using set
+def remove_duplicates(lst: list) -> set:
+    return set(lst)
+
 #SET2. Find common elements between two lists
+def common_elements(l1: list, l2: list) -> set:
+    return set(l1)&set(l2)
+
 #SET3. Check whether one set is subset of another
+def is_subset(s1: set, s2: set) -> bool:
+    return s1.issubset(s2)
+is_subset({1,2,3}, {1,2})
+
 #SET4. Find elements unique to each array
 #SET5. Implement union manually
 #SET6. Implement intersection manually
