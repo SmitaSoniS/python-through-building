@@ -38,6 +38,16 @@ def longest_word(sentence: str) -> str:
     return longest_word
 
 #S5. Reverse words in a sentence without using split reverse shortcut
+def reversed_sentence(sentence:str)->str:
+    final = ""
+    while " " in sentence:
+        space_position = sentence.rfind(" ")
+        word = sentence[space_position+1:]
+        final+=(word+" ")
+        sentence = sentence[:space_position]
+    final = final+sentence
+    return final
+
 #S6. Count frequency of each character manually
 #S7. Find duplicate characters in a string
 #S8. Find first non-repeating character
