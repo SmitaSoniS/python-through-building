@@ -49,6 +49,15 @@ def reversed_sentence(sentence:str)->str:
     return final
 
 #S6. Count frequency of each character manually
+def count_character(string:str)->dict:
+    final={}
+    for character in string:
+        if character not in final:
+            final[character]=1
+        else:
+            final[character]+=1
+    return final
+
 #S7. Find duplicate characters in a string
 #S8. Find first non-repeating character
 #S9. Remove duplicate characters while preserving order
@@ -76,6 +85,17 @@ def second_largest_entry(l: list) -> int:
     return second_largest
 
 #L3. Move all zeroes to end
+def move_all_zeros(l:list)->list:
+    count=0
+    for i in l:
+        if i==0:
+            count+=1
+            l.remove(i)
+        else:
+            continue
+    l.extend([0]*count)
+    return l
+move_all_zeros([1,2,0,5,0,6,7,0])
 #L4. Remove duplicates manually
 #L5. Remove duplicates from sorted list
 #L6. Rotate list by k positions
