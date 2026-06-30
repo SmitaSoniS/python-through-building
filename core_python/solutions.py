@@ -59,6 +59,19 @@ def count_character(string:str)->dict:
     return final
 
 #S7. Find duplicate characters in a string
+def duplicate_character(string: str)->list:
+    final = {}
+    for character in string:
+        if character not in final:
+            final[character] = 1
+        else:
+            final[character] += 1
+    duplicates = []
+    for key, value in final.items():
+        if value >= 2:
+            duplicates.append(key)
+    return duplicates
+
 #S8. Find first non-repeating character
 #S9. Remove duplicate characters while preserving order
 #S10. Check whether two strings are anagrams
@@ -95,7 +108,7 @@ def move_all_zeros(l:list)->list:
             continue
     l.extend([0]*count)
     return l
-move_all_zeros([1,2,0,5,0,6,7,0])
+
 #L4. Remove duplicates manually
 #L5. Remove duplicates from sorted list
 #L6. Rotate list by k positions
