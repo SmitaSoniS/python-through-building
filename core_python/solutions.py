@@ -73,6 +73,18 @@ def duplicate_character(string: str)->list:
     return duplicates
 
 #S8. Find first non-repeating character
+def find_non_repeating(s:str)->str:
+    d = {}
+    for c in s:
+        if c in d:
+            d[c]+=1
+        else:
+            d[c]=1
+    for key, value in d.items():
+        if value==1:
+            return key
+    return None
+
 #S9. Remove duplicate characters while preserving order
 #S10. Check whether two strings are anagrams
 #S11. Generate all substrings of a string
