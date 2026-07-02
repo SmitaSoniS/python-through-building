@@ -122,6 +122,13 @@ def move_all_zeros(l:list)->list:
     return l
 
 #L4. Remove duplicates manually
+def remove_duplicates(l:list)->list:
+    output = []
+    for i in range(len(l)):
+        if l[i] not in output:
+            output.append(l[i])
+    return output
+
 #L5. Remove duplicates from sorted list
 #L6. Rotate list by k positions
 #L7. Find duplicate elements in list
