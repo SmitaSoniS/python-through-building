@@ -86,6 +86,27 @@ def find_non_repeating(s:str)->str:
     return None
 
 #S9. Remove duplicate characters while preserving order
+# Time Complexity: O(n^2)
+# Reason: Repeated string concatenation causes repeated copying
+def remove_duplicates(s:str)->str:
+    seen = set()
+    output = ""
+    for c in s: # O(n)
+        if c not in seen: #O(1)
+            seen.add(c)
+            output += c
+    return output
+
+# Complexity O(n)
+def remove_duplicates(s:str)->str:
+    seen = set()
+    output = []
+    for c in s:
+        if c not in seen:
+            seen.add(c)
+            output.append(c)
+    return "".join(output)
+
 #S10. Check whether two strings are anagrams
 #S11. Generate all substrings of a string
 #S12. Implement split() manually
@@ -130,6 +151,8 @@ def remove_duplicates(l:list)->list:
     return output
 
 #L5. Remove duplicates from sorted list
+
+
 #L6. Rotate list by k positions
 #L7. Find duplicate elements in list
 #L8. Find intersection of two lists
