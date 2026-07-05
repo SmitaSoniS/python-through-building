@@ -108,6 +108,23 @@ def remove_duplicates(s:str)->str:
     return "".join(output)
 
 #S10. Check whether two strings are anagrams
+def is_anagrams(s1:str,s2:str)->bool:
+    if len(s1)!=len(s2):
+        return False
+    d1 = {}
+    d2 = {}
+    for a in s1:
+        if a not in d1:
+            d1[a] = 1
+        else:
+            d1[a]+=1
+    for b in s2:
+        if b not in d2:
+            d2[b] = 1
+        else:
+            d2[b]+=1
+    return d1==d2
+
 #S11. Generate all substrings of a string
 #S12. Implement split() manually
 #S13. Implement join() manually
