@@ -168,7 +168,24 @@ def remove_duplicates(l:list)->list:
     return output
 
 #L5. Remove duplicates from sorted list
+def remove_duplicates(l:list)->set:
+    return sorted(set(l))
 
+def remove_duplicates(l:list)->list:
+    l.sort()
+    output = []
+    for i in l:
+        if not output or i!=output[-1]:
+            output.append(i)
+    return output
+
+def remove_duplicates(l:list)->list:
+    l.sort()
+    output = []
+    for i in l:
+        if i not in output:
+            output.append(i)
+    return output
 
 #L6. Rotate list by k positions
 #L7. Find duplicate elements in list
