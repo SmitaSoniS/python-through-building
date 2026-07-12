@@ -127,6 +127,18 @@ def is_anagrams(s1:str,s2:str)->bool:
 
 #S11. Generate all substrings of a string
 #S12. Implement split() manually
+def split_str(s:str)->list[str]:
+    output = []
+    for i in s:
+        output.append(i)
+    return output
+
+def split_str(s:str)->list[str]:
+    return list(s)
+
+def split_str(s:str)->list[str]:
+    return [c for c in s]
+
 #S13. Implement join() manually
 #S14. Compress string (aaabbcc → a3b2c2)
 #S15. Find longest common prefix in list of strings
