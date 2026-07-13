@@ -140,7 +140,27 @@ def split_str(s:str)->list[str]:
     return [c for c in s]
 
 #S13. Implement join() manually
+def join_str(char_list:list[str]) -> str:
+    output = ""
+    for char in char_list:
+        output+=char
+    return output
+
 #S14. Compress string (aaabbcc → a3b2c2)
+def string_compress(characters:str)->str:
+    output = ""
+    count = 1
+    for i in range(len(characters)):
+        if i==0:
+            output+=characters[i]
+        elif characters[i]==output[-1]:
+            count+=1
+        else:
+            output+=str(count)
+            count = 1
+            output+=characters[i]
+    return output+str(count)
+
 #S15. Find longest common prefix in list of strings
 
 #L1. Reverse list without reverse()
