@@ -298,7 +298,10 @@ is_subset({1,2,3}, {1,2})
 #F14. Implement reduce() manually
 #F15. Build closure function
 
-#C1. Create list using list comprehension
+#C1. Create a list of squares of numbers from 1 to 20 using list comprehension.
+squares = [i*i for i in range(1, 21)]
+print(squares)
+
 #C2. Create dictionary using dict comprehension
 #C3. Create set using set comprehension
 #C4. Filter even numbers using comprehension
