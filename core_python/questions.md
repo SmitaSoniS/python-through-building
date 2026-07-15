@@ -150,9 +150,9 @@ Use the question IDs to map solutions consistently across solution files.
 
 ### Level 1 — Fundamentals
 
-* C1. Create list using list comprehension
+* C1. Create a list of squares of numbers from 1 to 20 using list comprehension.
 * C2. Create dictionary using dict comprehension
-* C3. Create set using set comprehension
+* C3. Create a set of unique squares of numbers from 1 to 20 using set comprehension.
 * C4. Filter even numbers using comprehension
 
 ### Level 2 — Intermediate
