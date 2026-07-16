@@ -283,6 +283,13 @@ is_subset({1,2,3}, {1,2})
 #T4. Sort list of tuples by second element
 
 #F1. Write iterative factorial
+def factorial(num:int)->int:
+    output = 1
+    for i in range(1,num+1):
+        output = output*i
+    return output
+factorial(4)
+
 #F2. Write recursive factorial
 #F3. Implement Fibonacci iteratively
 #F4. Implement Fibonacci recursively
@@ -303,7 +310,17 @@ squares = [i*i for i in range(1, 21)]
 print(squares)
 
 #C2. Create dictionary using dict comprehension
-#C3. Create set using set comprehension
+#C3. Create a set of unique squares of numbers from 1 to 20 using set comprehension.numbers = (i for a in range(11))
+squares = {i*i for i in range(11)}
+print(squares)
+
 #C4. Filter even numbers using comprehension
+even_nums = [i for i in range(21) if i%2==0]
+print(even_nums)
+
 #C5. Replace loop logic with comprehension
+my_list = [1, 2, 3, 4, 5]
+results = [item * 2 for item in my_list if item > 0]
+print(results)
+
 #C6. Flatten nested list using comprehension
