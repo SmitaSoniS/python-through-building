@@ -12,17 +12,17 @@ Use the question IDs to map solutions consistently across solution files.
 
 ## Level 1 — Fundamentals
 
-* LC1. Check whether a word exists in a string.
-* LC2. Find the first occurrence of a word.
-* LC3. Find all occurrences of a word.
-* LC4. Count occurrences of a word.
-* LC5. Replace a word with another word.
+* LC1. Check whether the word "Python" exists in the string "I am learning Python for Data Science"
+* LC2. Find the first occurrence of "Python" in "I am learning Python for Data Science".
+* LC3. Given the string "Python is great. I love Python. Python is easy.", find all occurrences of "Python".
+* LC4. Given the string "Python is great. I love Python. Python is easy.", count how many times "Python" appears.
+* LC5. Given the string "Python is easy. Python is powerful.", replace every occurrence of "Python" with "Java".
 
 ## Level 2 — Intermediate
 
-* LC6. Match an exact phrase.
-* LC7. Perform case-sensitive matching.
-* LC8. Split a string using a literal delimiter.
+* LC6. Given the string "Machine Learning with Python is fun.", check whether the exact phrase "Learning with Python" exists.
+* LC7. Given the string "Python python PYTHON", perform a case-sensitive search for "Python".
+* LC8. Given the string "apple|banana|mango|orange", split it using the delimiter "|".
 
 ---
 
