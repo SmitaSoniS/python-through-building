@@ -219,15 +219,19 @@ def remove_duplicates(l:list)->list:
             output.append(i)
     return output
 
-#L6. Rotate list by k positions (Incomplete rn)
-l = [1, 2, 3, 4, 5, 6, 7, 8]
-k =2
-output_expected = [3, 4, 5, 6, 7, 8, 1, 2]
+#L6. Rotate list by k positions
+l = [1, 2, 3, 4, 5]
+k = 3
 def rotate(l:list, k:int) -> list:
-
+    l_copy = l.copy()
+    j=0
     for i in range(len(l)):
-        l[i] = l[i+k]
-    return l
+        if i+k <= len(l)-1:
+            l_copy[i] = l[i+k]
+        else:
+            l_copy[i] = l[j]
+            j+=1
+    return l_copy
 rotate(l,k)
 
 #L7. Find duplicate elements in list
