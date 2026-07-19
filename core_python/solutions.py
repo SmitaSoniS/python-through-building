@@ -220,8 +220,7 @@ def remove_duplicates(l:list)->list:
     return output
 
 #L6. Rotate list by k positions
-l = [1, 2, 3, 4, 5]
-k = 3
+# Will throw IndexError when k>=len(l)
 def rotate(l:list, k:int) -> list:
     l_copy = l.copy()
     j=0
@@ -232,7 +231,31 @@ def rotate(l:list, k:int) -> list:
             l_copy[i] = l[j]
             j+=1
     return l_copy
-rotate(l,k)
+
+# To overcome above issue, normalized k
+def rotate(l:list, k:int) -> list:
+    k %= len(l)
+    l_copy = l.copy()
+    j=0
+    for i in range(len(l)):
+        if i+k <= len(l)-1:
+            l_copy[i] = l[i+k]
+        else:
+            l_copy[i] = l[j]
+            j+=1
+    return l_copy
+
+# Using modulo operator
+def rotate(l:list, k:int) -> list:
+    n = len(l)
+    k %= n
+
+    result = l.copy()
+
+    for i in range(n):
+        result[i] = l[(i + k) % n]
+
+    return result
 
 #L7. Find duplicate elements in list
 #L8. Find intersection of two lists
