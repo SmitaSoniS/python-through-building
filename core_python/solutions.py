@@ -162,6 +162,7 @@ def string_compress(characters:str)->str:
     return output+str(count)
 
 #S15. Find longest common prefix in list of strings
+solve tomorrow
 
 #L1. Reverse list without reverse()
 def reverse_list(lst: list) -> list:
@@ -249,12 +250,9 @@ def rotate(l:list, k:int) -> list:
 def rotate(l:list, k:int) -> list:
     n = len(l)
     k %= n
-
     result = l.copy()
-
     for i in range(n):
         result[i] = l[(i + k) % n]
-
     return result
 
 #L7. Find duplicate elements in list
