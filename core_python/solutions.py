@@ -326,6 +326,8 @@ def factorial(num:int)->int:
 factorial(4)
 
 #F2. Write recursive factorial
+solve this
+
 #F3. Implement Fibonacci iteratively
 #F4. Implement Fibonacci recursively
 #F5. Return multiple values from function
