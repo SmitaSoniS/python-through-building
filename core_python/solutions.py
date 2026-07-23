@@ -126,6 +126,9 @@ def is_anagrams(s1:str,s2:str)->bool:
     return d1==d2
 
 #S11. Generate all substrings of a string
+def generate_str(s:str) -> str:
+    
+
 #S12. Implement split() manually
 def split_str(s:str)->list[str]:
     output = []
@@ -162,7 +165,6 @@ def string_compress(characters:str)->str:
     return output+str(count)
 
 #S15. Find longest common prefix in list of strings
-solve tomorrow
 
 #L1. Reverse list without reverse()
 def reverse_list(lst: list) -> list:
@@ -326,8 +328,6 @@ def factorial(num:int)->int:
 factorial(4)
 
 #F2. Write recursive factorial
-solve this
-
 #F3. Implement Fibonacci iteratively
 #F4. Implement Fibonacci recursively
 #F5. Return multiple values from function
