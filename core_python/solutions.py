@@ -126,8 +126,12 @@ def is_anagrams(s1:str,s2:str)->bool:
     return d1==d2
 
 #S11. Generate all substrings of a string
-def generate_str(s:str) -> str:
-    
+def generate_str(s:str) -> list:
+    result = []
+    for i in range(len(s)):
+        for j in range(i+1, len(s)+1):
+            result.append(s[i:j])
+    return result
 
 #S12. Implement split() manually
 def split_str(s:str)->list[str]:
