@@ -262,6 +262,17 @@ def rotate(l:list, k:int) -> list:
     return result
 
 #L7. Find duplicate elements in list
+def return_duplicates(l:list[int]) -> list:
+    result = []
+    for i in range(len(l)):
+        if l[i] in result:
+            continue
+        for j in range(i + 1, len(l)):
+            if l[i] == l[j]:
+                result.append(l[i])
+                break
+    return result
+
 #L8. Find intersection of two lists
 #L9. Merge two sorted arrays
 #L10. Split list into chunks of size k
