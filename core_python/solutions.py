@@ -274,6 +274,15 @@ def return_duplicates(l:list[int]) -> list:
     return result
 
 #L8. Find intersection of two lists
+def common(l1:list[int], l2:list[int]) -> list[int]:
+    result = []
+
+    for m in l1:
+        if m in l2:
+            result.append(m)
+
+    return result
+
 #L9. Merge two sorted arrays
 #L10. Split list into chunks of size k
 #L11. Implement append manually
