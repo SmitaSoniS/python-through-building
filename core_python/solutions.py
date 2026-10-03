@@ -352,6 +352,15 @@ def factorial(num:int)->int:
 factorial(4)
 
 #F2. Write recursive factorial
+#With Factorial Function:
+def factorial(n:int) -> int:
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+#Without Factorial Function:
+
 #F3. Implement Fibonacci iteratively
 #F4. Implement Fibonacci recursively
 #F5. Return multiple values from function
