@@ -169,6 +169,19 @@ def string_compress(characters:str)->str:
     return output+str(count)
 
 #S15. Find longest common prefix in list of strings
+def longest_prefix(s1:str, s2:str) -> str:
+    if len(s1)>len(s2):
+        n = len(s2)
+    else:
+        n = len(s1)
+    result = ""
+    for i in range(n):
+        if s1[i]==s2[i]:
+            result+=s1[i]
+        else:
+            break
+    return result
+print(longest_prefix('abcd','abc'))
 
 #L1. Reverse list without reverse()
 def reverse_list(lst: list) -> list:
@@ -284,6 +297,25 @@ def common(l1:list[int], l2:list[int]) -> list[int]:
     return result
 
 #L9. Merge two sorted arrays
+def merge_sorted(arr1:list[int], arr2:list[int]) -> list[int]:
+    i = 0
+    j = 0
+    result = []
+
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] <= arr2[j]:
+            result.append(arr1[i])
+            i += 1
+        else:
+            result.append(arr2[j])
+            j += 1
+
+    # Add remaining elements
+    result.extend(arr1[i:])
+    result.extend(arr2[j:])
+
+    return result
+
 #L10. Split list into chunks of size k
 #L11. Implement append manually
 #L12. Implement pop manually
