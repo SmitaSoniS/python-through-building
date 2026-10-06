@@ -317,6 +317,12 @@ def merge_sorted(arr1:list[int], arr2:list[int]) -> list[int]:
     return result
 
 #L10. Split list into chunks of size k
+def split_list(l: list, k: int) -> list:
+    result = []
+    for i in range(0, len(l), k):
+        result.append(l[i:i+k])
+    return result
+
 #L11. Implement append manually
 #L12. Implement pop manually
 #L13. Implement insert manually
