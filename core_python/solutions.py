@@ -324,6 +324,16 @@ def split_list(l: list, k: int) -> list:
     return result
 
 #L11. Implement append manually
+def manual_append(l: list, value) -> list:
+    new_list = [None] * (len(l) + 1)
+
+    for i in range(len(l)):
+        new_list[i] = l[i]
+
+    new_list[len(l)] = value
+
+    return new_list
+
 #L12. Implement pop manually
 #L13. Implement insert manually
 #L14. Find missing number in array
